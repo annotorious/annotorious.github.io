@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>API Docs on recogito.github.io</title>
-    <link>http://recogito.github.io/api-docs/</link>
-    <description>Recent content in API Docs on recogito.github.io</description>
+    <title>API Docs on annotorious.github.io</title>
+    <link>http://annotorious.github.io/api-docs/</link>
+    <description>Recent content in API Docs on annotorious.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2020 09:28:16 +0200</lastBuildDate><atom:link href="http://recogito.github.io/api-docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jun 2020 09:28:16 +0200</lastBuildDate><atom:link href="http://annotorious.github.io/api-docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API Docs | Annotorious OSD Plugin</title>
-      <link>http://recogito.github.io/api-docs/osd-plugin/</link>
+      <link>http://annotorious.github.io/api-docs/osd-plugin/</link>
       <pubDate>Sun, 17 May 2020 14:15:19 +0200</pubDate>
       
-      <guid>http://recogito.github.io/api-docs/osd-plugin/</guid>
+      <guid>http://annotorious.github.io/api-docs/osd-plugin/</guid>
       <description>API Reference: OpenSeadragon Plugin The OpenSeadragon Plugin is an extension to the OpenSeadragon zoomable image viewer. If you are looking for the standard version of Annotorious, which works with normal images embedded in websites, see here instead.
 Initialization When included via &amp;lt;script&amp;gt; tag:
 var anno = OpenSeadragon.Annotorious(viewer, config); With npm:
@@ -21,10 +21,10 @@ import OpenSeadragon from &amp;#39;openseadragon&amp;#39;; import * as Annotorio
     
     <item>
       <title>API Docs | Annotorious</title>
-      <link>http://recogito.github.io/api-docs/annotorious/</link>
+      <link>http://annotorious.github.io/api-docs/annotorious/</link>
       <pubDate>Sun, 17 May 2020 14:14:36 +0200</pubDate>
       
-      <guid>http://recogito.github.io/api-docs/annotorious/</guid>
+      <guid>http://annotorious.github.io/api-docs/annotorious/</guid>
       <description>API Reference: Annotorious The standard version of Annotorious works with normal images embedded in websites or web applications. If you are looking for the Annotorious OpenSeadragon plugin, see here instead.
 Initialization When included via &amp;lt;script&amp;gt; tag:
 var config = { image: document.getElementById(&amp;#39;my-image&amp;#39;), readOnly: true }; var anno = Annotorious.init(config); With npm:
