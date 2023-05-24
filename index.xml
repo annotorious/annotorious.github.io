@@ -38,7 +38,7 @@ For every annotation shape, Annotorious renders two SVG shapes, exactly on top o
       <guid>http://annotorious.github.io/getting-started/osd-plugin/</guid>
       <description>Getting Started with the OpenSeadragon Plugin The Annotorious OpenSeadragon plugin is an extension to the OpenSeadragon viewer for zoomable high-resolution images. Click or tap the annotation to edit. Hold the SHIFT key while clicking and dragging the mouse to create a new annotation.
 Download the latest release and include script and stylesheet file in your web page. Make sure to include the script after the OpenSeadragon script.
-&amp;lt;!-- CSS stylesheet --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;annotorious.</description>
+Important! From version 2.</description>
     </item>
     
     <item>
