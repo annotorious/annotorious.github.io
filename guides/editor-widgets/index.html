@@ -13,7 +13,7 @@
 <meta name="twitter:description" content="This guide explains how you can write your own widgets and plug them into the annotation editor.">
 <meta property="og:title" content="Writing Editor Widgets" />
 <meta property="og:description" content="This guide explains how you can write your own widgets and plug them into the annotation editor.">
-<meta property="og:url" content="https://recogito.github.io/guides/editor-widgets" />
+<meta property="og:url" content="https://annotorious.github.io/guides/editor-widgets" />
 <meta property="og:image" content="https://annotorious.github.io/images/annotorious-social-large.png" />
 <meta property="og:type" content="object" />
 
@@ -81,7 +81,7 @@ same interface conventions as the built-in widgets.</li>
 </ol>
 <blockquote>
 <p>Before you start writing your own widgets, you should first familiarize yourself with the
-the <a href="/annotorious/getting-started/web-annotation">W3C Web Annotation specification</a>, in
+the <a href="/getting-started/web-annotation">W3C Web Annotation specification</a>, in
 particular the concepts of <strong>annotation bodies</strong> and body <strong>purposes</strong>.</p>
 </blockquote>
 <h2 id="annotation-bodies">Annotation Bodies</h2>
@@ -194,7 +194,7 @@ in different colors. Clicking a button triggers <code>addTag</code>.</li>
 <li>Just add a bit of CSS for style</li>
 </ol>
 <p>Since the <code>highlighting</code> body is now stored in the annotation, we can write a
-<a href="/annotorious/api-docs/annotorious/#formatters">formatter</a> that renders highlighted
+<a href="/api-docs/annotorious/#formatters">formatter</a> that renders highlighted
 annotations in different colors.</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#586e75">/** A matching formatter that sets the color according to the &#39;highlighting&#39; body value **/</span>
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">var</span> ColorFormatter <span style="color:#719e07">=</span> <span style="color:#268bd2">function</span>(annotation) {
