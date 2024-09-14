@@ -4,7 +4,7 @@
     <title>Annotorious | API Docs | Annotorious OSD Plugin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
       
-    <link rel="stylesheet" href="/css/style.min.75017861b239a23b53d820680640ff764c73ea81a8fe85f2d9bf0dc63ff88982.css">
+    <link rel="stylesheet" href="/css/style.min.7e8035b4ba2f92df80624273f6098d1f81ea9de6345d1234869ac5f7ca8e81a6.css">
     <meta name="description" content="API Documentation for the Annotorious OpenSeadragon plugin">
 <meta name="twitter:title" content="Annotorious OpenSeadragon API" />
 <meta name="twitter:image:src" content="https://annotorious.github.io/images/annotorious-social-large.png" />
@@ -20,6 +20,9 @@
     <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"rainer@no5.at",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
   </head>
   <body>
+    <header class="banner">
+      Annotorious version 2 is no longer maintained.&nbsp;<a href="https://annotorious.dev">Go to Annotorious v3.</a>
+    </header>
     <div id="navbar" class="navbar">
   <script>
     var openResponsiveMenu = function() {
@@ -98,94 +101,94 @@ normal images embedded in websites, <a href="/api-docs/annotorious">see here ins
 </span></span><span style="display:flex;"><span>Annotorious(viewer, config);
 </span></span></code></pre></div><p>The <code>config</code> object is optional, and supports following properties:</p>
 <table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>allowEmpty</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>Annotations created without bodies are normally discarded. Set to <code>true</code> to allow empty annotations.</td>
-</tr>
-<tr>
-<td><code>disableEditor</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>Disable the editor if you only need drawing functionality, but not the popup.</td>
-</tr>
-<tr>
-<td><code>disableSelect</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>Disables selection functionality. Clicking will no longer open the editor. (The <code>clickAnnotation</code> event still fires.)</td>
-</tr>
-<tr>
-<td><code>drawOnSingleClick</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>If <code>true</code> users can start drawing with a single click also, not just with click-and-drag</td>
-</tr>
-<tr>
-<td><code>formatters</code></td>
-<td>Array | Function</td>
-<td>-</td>
-<td>A <a href="#formatters">formatter function</a> or list of functions providing custom style rules.</td>
-</tr>
-<tr>
-<td><code>fragmentUnit</code></td>
-<td>String</td>
-<td>&lsquo;pixel&rsquo;</td>
-<td>Store rectangle coordinates in <code>pixel</code> units (default) or <code>percent</code> units.</td>
-</tr>
-<tr>
-<td><code>gigapixelMode</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>Enables slower, but more accurate shape rendering on images with extrememly high resolution. Note that gigapixelMode current doesn&rsquo;t support rotate or flipped OSD views.</td>
-</tr>
-<tr>
-<td><code>handleRadius</code></td>
-<td>Number</td>
-<td>6</td>
-<td>Radius of the shape resize handles.</td>
-</tr>
-<tr>
-<td><code>hotkey</code></td>
-<td>Object</td>
-<td>-</td>
-<td>Re-assigns the key that activates drawing mode (Shift by default). Allowed values are, either, a keycode (e.g. &lsquo;Shift&rsquo;, &lsquo;Alt&rsquo;, &lsquo;Control&rsquo;), or an object with a <code>key</code> and an optional <code>inverted</code> property. If <code>inverted</code> is set to <code>true</code>, Annotorious is permanently in drawing mode. Image navigation is only possible when the hotkey is pressed.</td>
-</tr>
-<tr>
-<td><code>locale</code></td>
-<td>String</td>
-<td>-</td>
-<td>Two-character ISO language code or <code>auto</code> to use the browser setting.</td>
-</tr>
-<tr>
-<td><code>messages</code></td>
-<td>Object</td>
-<td>-</td>
-<td>Custom UI labels. Requires a <a href="https://annotorious.github.io/guides/contributing-ui-translations/">message dictionary</a> object.</td>
-</tr>
-<tr>
-<td><code>readOnly</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>Display annotations in read-only mode.</td>
-</tr>
-<tr>
-<td><code>widgets</code></td>
-<td>Array</td>
-<td>-</td>
-<td>A list of editor widget definitions (see <a href="/guides/configuring-the-editor/">this guide</a> for details).</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Property</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Default</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>allowEmpty</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">false</td>
+          <td style="text-align: left">Annotations created without bodies are normally discarded. Set to <code>true</code> to allow empty annotations.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>disableEditor</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">false</td>
+          <td style="text-align: left">Disable the editor if you only need drawing functionality, but not the popup.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>disableSelect</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">false</td>
+          <td style="text-align: left">Disables selection functionality. Clicking will no longer open the editor. (The <code>clickAnnotation</code> event still fires.)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>drawOnSingleClick</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">false</td>
+          <td style="text-align: left">If <code>true</code> users can start drawing with a single click also, not just with click-and-drag</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>formatters</code></td>
+          <td style="text-align: left">Array | Function</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">A <a href="#formatters">formatter function</a> or list of functions providing custom style rules.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>fragmentUnit</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">&lsquo;pixel&rsquo;</td>
+          <td style="text-align: left">Store rectangle coordinates in <code>pixel</code> units (default) or <code>percent</code> units.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>gigapixelMode</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">false</td>
+          <td style="text-align: left">Enables slower, but more accurate shape rendering on images with extrememly high resolution. Note that gigapixelMode current doesn&rsquo;t support rotate or flipped OSD views.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>handleRadius</code></td>
+          <td style="text-align: left">Number</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">Radius of the shape resize handles.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>hotkey</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">Re-assigns the key that activates drawing mode (Shift by default). Allowed values are, either, a keycode (e.g. &lsquo;Shift&rsquo;, &lsquo;Alt&rsquo;, &lsquo;Control&rsquo;), or an object with a <code>key</code> and an optional <code>inverted</code> property. If <code>inverted</code> is set to <code>true</code>, Annotorious is permanently in drawing mode. Image navigation is only possible when the hotkey is pressed.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>locale</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">Two-character ISO language code or <code>auto</code> to use the browser setting.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>messages</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">Custom UI labels. Requires a <a href="https://annotorious.github.io/guides/contributing-ui-translations/">message dictionary</a> object.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>readOnly</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">false</td>
+          <td style="text-align: left">Display annotations in read-only mode.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>widgets</code></td>
+          <td style="text-align: left">Array</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">A list of editor widget definitions (see <a href="/guides/configuring-the-editor/">this guide</a> for details).</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="instance-fields">Instance Fields</h2>
 <h3 id="disableeditor">disableEditor</h3>
@@ -216,20 +219,20 @@ the <code>selectAnnotation</code> event. The <code>clickAnnotation</code> event 
 </span></span></code></pre></div><p>Adds an annotation programmatically. The format is the
 <a href="https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model">W3C WebAnnotation model</a>.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the annotation in W3C WebAnnotation format</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation in W3C WebAnnotation format</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="adddrawingtool">.addDrawingTool</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.addDrawingTool(plugin);
@@ -253,69 +256,69 @@ more information about creator data.)</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.fitBounds(arg [, immediately]);
 </span></span></code></pre></div><p>Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arg</code></td>
-<td>String, Object</td>
-<td>the annotation or the annotation ID</td>
-</tr>
-<tr>
-<td><code>immediately</code></td>
-<td>Boolean</td>
-<td>if <code>true</code> pans and zooms without animation</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>arg</code></td>
+          <td style="text-align: left">String, Object</td>
+          <td style="text-align: left">the annotation or the annotation ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>immediately</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">if <code>true</code> pans and zooms without animation</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="fitboundswithconstraints">.fitBoundsWithConstraints</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.fitBoundsWithConstraints(arg [, immediately]);
 </span></span></code></pre></div><p>Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation,
 while enforcing the constraints (minZoom, maxZoom and visibilityRatio).</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arg</code></td>
-<td>String, Object</td>
-<td>the annotation or the annotation ID</td>
-</tr>
-<tr>
-<td><code>immediately</code></td>
-<td>Boolean</td>
-<td>if <code>true</code> pans and zooms without animation</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>arg</code></td>
+          <td style="text-align: left">String, Object</td>
+          <td style="text-align: left">the annotation or the annotation ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>immediately</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">if <code>true</code> pans and zooms without animation</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="getannotationbyid">.getAnnotationById</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#268bd2">const</span> annotation <span style="color:#719e07">=</span> getAnnotationById(id);
 </span></span></code></pre></div><p>Returns the annotation with the specified ID.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-<td>the annotation ID</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>id</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">the annotation ID</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="getannotations">.getAnnotations</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.getAnnotations();
@@ -324,20 +327,20 @@ while enforcing the constraints (minZoom, maxZoom and visibilityRatio).</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.getAnnotationsIntersecting(arg);
 </span></span></code></pre></div><p>Returns the annotations whose bounding boxes intersect with the bounding box of the specified annotation.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arg</code></td>
-<td>String, Object</td>
-<td>the annotation or the annotation ID</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>arg</code></td>
+          <td style="text-align: left">String, Object</td>
+          <td style="text-align: left">the annotation or the annotation ID</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="getimagesnippetbyid">.getImageSnippetById</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#268bd2">const</span> { snippet, transform } <span style="color:#719e07">=</span> anno.getImageSnippetById(annotationId);
@@ -353,25 +356,25 @@ It will only return a valid snippet if the given annotation is currently
 visible in the OpenSeadragon viewport.</p>
 </blockquote>
 <table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>snippet</code></td>
-<td>Canvas</td>
-<td>the image under the given annotations&rsquo; bounds as a CANVAS element</td>
-</tr>
-<tr>
-<td><code>transform</code></td>
-<td>Function</td>
-<td>coordinate conversion function</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>snippet</code></td>
+          <td style="text-align: left">Canvas</td>
+          <td style="text-align: left">the image under the given annotations&rsquo; bounds as a CANVAS element</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>transform</code></td>
+          <td style="text-align: left">Function</td>
+          <td style="text-align: left">coordinate conversion function</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="getselected">.getSelected</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#268bd2">const</span> selected <span style="color:#719e07">=</span> anno.getSelected();
@@ -386,25 +389,25 @@ the selected image snippet (in the same resolution as the current OpenSeadragon 
 space back to the coordinate space of the full image</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>snippet</code></td>
-<td>Canvas</td>
-<td>the image under the current selection bounds as a <code>Canvas</code> element</td>
-</tr>
-<tr>
-<td><code>transform</code></td>
-<td>Function</td>
-<td>coordinate conversion function</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>snippet</code></td>
+          <td style="text-align: left">Canvas</td>
+          <td style="text-align: left">the image under the current selection bounds as a <code>Canvas</code> element</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>transform</code></td>
+          <td style="text-align: left">Function</td>
+          <td style="text-align: left">coordinate conversion function</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="listdrawingtools">.listDrawingTools</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#268bd2">const</span> toolNames <span style="color:#719e07">=</span> anno.listDrawingTools();
@@ -418,155 +421,155 @@ case you want to perform an action after the annotations have loaded.</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Do something
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>url</code></td>
-<td>String</td>
-<td>the URL to HTTP GET the annotations from</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>url</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">the URL to HTTP GET the annotations from</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="off">.off</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.off(event [, callback]);
 </span></span></code></pre></div><p>Unsubscribe from an event. If no callback is provided,
 all event handlers for this event will be unsubscribed.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>event</code></td>
-<td>String</td>
-<td>the name of the event</td>
-</tr>
-<tr>
-<td><code>callback</code></td>
-<td>Function</td>
-<td>the function used when binding to the event</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>event</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">the name of the event</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>callback</code></td>
+          <td style="text-align: left">Function</td>
+          <td style="text-align: left">the function used when binding to the event</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="on">.on</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(event, callback);
 </span></span></code></pre></div><p>Subscribe to an event. (See <a href="#events">Events</a> for the list.)</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>event</code></td>
-<td>String</td>
-<td>the name of the event</td>
-</tr>
-<tr>
-<td><code>callback</code></td>
-<td>Function</td>
-<td>the function to call when the event is emitted</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>event</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">the name of the event</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>callback</code></td>
+          <td style="text-align: left">Function</td>
+          <td style="text-align: left">the function to call when the event is emitted</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="once">.once</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.once(event, callback);
 </span></span></code></pre></div><p>Subscribe to an event only <strong>once</strong>. (See <a href="#events">Events</a> for the list.)</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>event</code></td>
-<td>String</td>
-<td>the name of the event</td>
-</tr>
-<tr>
-<td><code>callback</code></td>
-<td>Function</td>
-<td>the function to call when the event is emitted</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>event</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">the name of the event</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>callback</code></td>
+          <td style="text-align: left">Function</td>
+          <td style="text-align: left">the function to call when the event is emitted</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="panto">.panTo</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.panTo(arg [, immediately]);
 </span></span></code></pre></div><p>Pans the OpenSeadragon viewport to the specified annotation.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arg</code></td>
-<td>String, Object</td>
-<td>the annotation or the annotation ID</td>
-</tr>
-<tr>
-<td><code>immediately</code></td>
-<td>Boolean</td>
-<td>if <code>true</code> pans without animation</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>arg</code></td>
+          <td style="text-align: left">String, Object</td>
+          <td style="text-align: left">the annotation or the annotation ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>immediately</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">if <code>true</code> pans without animation</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="removeannotation">.removeAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.removeAnnotation(arg);
 </span></span></code></pre></div><p>Removes an annotation programmatically. <strong>Note:</strong> programmatic remove <strong>will not</strong> trigger the <a href="#deleteannotation">deleteAnnotation event</a>!</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arg</code></td>
-<td>String, Object</td>
-<td>the annotation in W3C WebAnnotation format or the annotation ID</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>arg</code></td>
+          <td style="text-align: left">String, Object</td>
+          <td style="text-align: left">the annotation in W3C WebAnnotation format or the annotation ID</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="removedrawingtool">.removeDrawingTool</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.removeDrawingTool(id);
 </span></span></code></pre></div><p>Removes the drawing tool with the specified tool ID.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-<td>the drawing tool ID</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>id</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">the drawing tool ID</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="saveselected">.saveSelected</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.saveSelected();
@@ -583,40 +586,40 @@ the current selection, if any</li>
 <li>Note that the the <code>selectAnnotation</code> event will <strong>not</strong> fire when using this method</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arg</code></td>
-<td>String, Object</td>
-<td>the annotation or the annotation ID</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>arg</code></td>
+          <td style="text-align: left">String, Object</td>
+          <td style="text-align: left">the annotation or the annotation ID</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="setannotations">.setAnnotations</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.setAnnotations(annotations);
 </span></span></code></pre></div><p>Renders the list of annotations to the image, removing any previously
 existing annotations.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotations</code></td>
-<td>Array</td>
-<td>array of annotations in W3C WebAnnotation format</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotations</code></td>
+          <td style="text-align: left">Array</td>
+          <td style="text-align: left">array of annotations in W3C WebAnnotation format</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="setauthinfo">.setAuthInfo</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#268bd2">var</span> anno <span style="color:#719e07">=</span> Annotorious.init({ image<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;my-image&#39;</span> });
@@ -631,25 +634,25 @@ are created or updated, and display it in the editor popup.</p>
 <p>Set this data right after initializing Annotorious, and in case the user login status in your host
 application changes. The argument to <code>.setAuthInfo</code> is an object with the following properties:</p>
 <table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-<td><strong>REQUIRED</strong> the user ID, which should be a URI</td>
-</tr>
-<tr>
-<td><code>displayName</code></td>
-<td>String</td>
-<td><strong>REQUIRED</strong> the user name, for display in the UI</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Property</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>id</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left"><strong>REQUIRED</strong> the user ID, which should be a URI</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>displayName</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left"><strong>REQUIRED</strong> the user name, for display in the UI</td>
+      </tr>
+  </tbody>
 </table>
 <p>Annotorious will insert this data into every new annotation body that gets created:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{ 
@@ -678,20 +681,20 @@ holding the mouse button.</p>
 switches back to normal zoom &amp; pan behavior.</p>
 <p><code>.setDrawingEnabled</code> has no effect while <code>readOnly</code> mode is active.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>enabled</code></td>
-<td>Boolean</td>
-<td>if <code>true</code> OpenSeadragon switches from navigation to drawing mode</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>enabled</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">if <code>true</code> OpenSeadragon switches from navigation to drawing mode</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="setdrawingtool">.setDrawingTool</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.setDrawingTool(toolName);
@@ -701,20 +704,20 @@ provides a standard rectangle tool (<code>rect</code>) and a standard polygon dr
 <p>More tools may be available through plugins. Use <a href="#listdrawingtools">.listDrawingTool</a>
 to get the list of registered tools.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>toolName</code></td>
-<td>String</td>
-<td>E.g. <code>rect</code> or <code>polygon</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>toolName</code></td>
+          <td style="text-align: left">String</td>
+          <td style="text-align: left">E.g. <code>rect</code> or <code>polygon</code></td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="setservertime">.setServerTime</h3>
 <p>Set a &ldquo;server time&rdquo; timestamp. When using <a href="#setauthinfo">authInfo</a>, this method helps to synchronize the
@@ -726,20 +729,20 @@ server time the user&rsquo;s local clock.</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.setVisible(visible);
 </span></span></code></pre></div><p>Shows or hides the annotation layer.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>visible</code></td>
-<td>Boolean</td>
-<td>if <code>true</code> show the annotation layer, otherwise hide it</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>visible</code></td>
+          <td style="text-align: left">Boolean</td>
+          <td style="text-align: left">if <code>true</code> show the annotation layer, otherwise hide it</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="updateselected">.updateSelected</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.updateSelected(annotation[, saveImmediately]);
@@ -778,20 +781,20 @@ to <code>true</code>).</p>
 </span></span></code></pre></div><p>Fired when the user has canceled a selection, by hitting <strong>Cancel</strong> in the editor, or by
 clicking or tapping outside the selected annotation shape.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>selection</code></td>
-<td>Object</td>
-<td>the canceled selection in W3C WebAnnotation format</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>selection</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the canceled selection in W3C WebAnnotation format</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="changeselectiontarget">changeSelectionTarget</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;changeSelectionTarget&#39;</span>, <span style="color:#268bd2">function</span>(target) {
@@ -800,20 +803,20 @@ clicking or tapping outside the selected annotation shape.</p>
 </span></span></code></pre></div><p>Fired when the shape of a newly created selection, or of a selected annotation
 is moved or resized.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>target</code></td>
-<td>Object</td>
-<td>the W3C WebAnnotation target</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>target</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the W3C WebAnnotation target</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="clickannotation">clickAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;clickAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation, element) {
@@ -822,25 +825,25 @@ is moved or resized.</p>
 </span></span></code></pre></div><p>Fired every time the user clicks an annotation (regardless of whether it is already
 selected or not).</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the clicked annotation</td>
-</tr>
-<tr>
-<td><code>element</code></td>
-<td>Element</td>
-<td>the clicked annotation SVG shape element</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the clicked annotation</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>element</code></td>
+          <td style="text-align: left">Element</td>
+          <td style="text-align: left">the clicked annotation SVG shape element</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="createannotation">createAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;createAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation, overrideId) {
@@ -848,25 +851,25 @@ selected or not).</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><p>Fired when a new annotation is created from a user selection.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the annotation in W3C WebAnnotation format</td>
-</tr>
-<tr>
-<td><code>overrideId</code></td>
-<td>Function</td>
-<td>a callback function for assigning a custom annotation ID</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation in W3C WebAnnotation format</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>overrideId</code></td>
+          <td style="text-align: left">Function</td>
+          <td style="text-align: left">a callback function for assigning a custom annotation ID</td>
+      </tr>
+  </tbody>
 </table>
 <p>When an annotation is created, Annotorious automatically assigns it a globally unique
 ID. It is possible to override this ID with your own (e.g. server-generated) ID via
@@ -884,20 +887,20 @@ the overrideId callback function.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><p>Fired when a new selection shape is drawn on the image.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>selection</code></td>
-<td>Object</td>
-<td>the selection object in W3C WebAnnotation format</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>selection</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the selection object in W3C WebAnnotation format</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="deleteannotation">deleteAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;deleteAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation) {
@@ -905,20 +908,20 @@ the overrideId callback function.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><p>Fired when an existing annotation was deleted.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the deleted annotation</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the deleted annotation</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="mouseenterannotation">mouseEnterAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;mouseEnterAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation, element) {
@@ -926,25 +929,25 @@ the overrideId callback function.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><p>Fired when the mouse moves into an existing annotation.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the annotation</td>
-</tr>
-<tr>
-<td><code>element</code></td>
-<td>Object</td>
-<td>the annotation shape SVG element</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>element</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation shape SVG element</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="mouseleaveannotation">mouseLeaveAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;mouseLeaveAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation, element) {
@@ -952,25 +955,25 @@ the overrideId callback function.</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><p>Fired when the mouse moves out of an existing annotation.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the annotation</td>
-</tr>
-<tr>
-<td><code>element</code></td>
-<td>Object</td>
-<td>the annotation shape SVG element</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>element</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation shape SVG element</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="selectannotation-1">selectAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;selectAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation, element) {
@@ -979,25 +982,25 @@ the overrideId callback function.</p>
 </span></span></code></pre></div><p>Fired when the user selects an annotation. Note that this event will <strong>not</strong> fire when
 the selection is made programmatically through the <code>selectAnnotation(arg)</code> API method.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the annotation in W3C WebAnnotation format</td>
-</tr>
-<tr>
-<td><code>element</code></td>
-<td>Element</td>
-<td>the annotation SVG shape element</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation in W3C WebAnnotation format</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>element</code></td>
+          <td style="text-align: left">Element</td>
+          <td style="text-align: left">the annotation SVG shape element</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="startselection">startSelection</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;startSelection&#39;</span>, <span style="color:#268bd2">function</span>(point) {
@@ -1005,20 +1008,20 @@ the selection is made programmatically through the <code>selectAnnotation(arg)</
 </span></span><span style="display:flex;"><span>});
 </span></span></code></pre></div><p>Fired when the user starts drawing a new shape.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>point</code></td>
-<td>Object</td>
-<td>the x/y coordinates of the start point (image pixel coordinates)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>point</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the x/y coordinates of the start point (image pixel coordinates)</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="updateannotation">updateAnnotation</h3>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>anno.on(<span style="color:#2aa198">&#39;updateAnnotation&#39;</span>, <span style="color:#268bd2">function</span>(annotation, previous) {
@@ -1026,25 +1029,25 @@ the selection is made programmatically through the <code>selectAnnotation(arg)</
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>});
 </span></span></code></pre></div><p>Fired when an existing annotation was updated.</p>
 <table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>annotation</code></td>
-<td>Object</td>
-<td>the updated annotation</td>
-</tr>
-<tr>
-<td><code>previous</code></td>
-<td>Object</td>
-<td>the annotation state before the update</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>annotation</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the updated annotation</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>previous</code></td>
+          <td style="text-align: left">Object</td>
+          <td style="text-align: left">the annotation state before the update</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="formatters-1">Formatters</h2>
 <p>Per default, Annotorious renders annotations as SVG <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">group</a>
